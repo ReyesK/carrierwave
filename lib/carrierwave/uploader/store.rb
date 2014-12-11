@@ -42,7 +42,7 @@ module CarrierWave
       def store_path(for_file=filename)
         if store_dir.blank?
             Rails.logger.debug("blank store_dir")
-            File.join(full_filename(for_file))
+            full_filename(for_file)
         else
             File.join([store_dir, full_filename(for_file)].compact)
         end
